@@ -1,14 +1,12 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: v1
+kind: Service
 metadata:
   name: nextcloud
   namespace: nextcloud
-  annotations:
-    tailscale.com/hostname: nextcloud
 spec:
-  ingressClassName: tailscale
-  defaultBackend:
-    service:
-      name: nextcloud
-      port:
-        number: 80
+  type: ClusterIP
+  selector:
+    app: nextcloud
+  ports:
+    - port: 80
+      targetPort: 80
