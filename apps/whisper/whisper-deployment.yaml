@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: whisper
   namespace: ai
+
 spec:
   replicas: 1
 
@@ -16,6 +17,8 @@ spec:
         app: whisper
 
     spec:
+      terminationGracePeriodSeconds: 60
+
       containers:
         - name: whisper
           image: hhector16/whisper-ai:0.1
@@ -24,6 +27,13 @@ spec:
           ports:
             - containerPort: 8000
 
+          env:
+            - name: HF_HUB_DISABLE_XET
+              value: "1"
+
+            - name: TOKENIZERS_PARALLELISM
+              value: "false"
+
           resources:
             requests:
               cpu: "500m"
@@ -31,18 +41,22 @@ spec:
 
             limits:
               cpu: "2"
-              memory: "2Gi"
+              memory: "3Gi"
 
           livenessProbe:
             httpGet:
               path: /docs
               port: 8000
-            initialDelaySeconds: 30
-            periodSeconds: 20
+            initialDelaySeconds: 300
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
 
           readinessProbe:
             httpGet:
               path: /docs
               port: 8000
-            initialDelaySeconds: 10
-            periodSeconds: 10
+            initialDelaySeconds: 300
+            periodSeconds: 15
+            timeoutSeconds: 5
+            failureThreshold: 3
