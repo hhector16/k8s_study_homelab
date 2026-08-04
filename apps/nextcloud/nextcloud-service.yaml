@@ -4,10 +4,9 @@ metadata:
   name: nextcloud
   namespace: nextcloud
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: nextcloud
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30081
