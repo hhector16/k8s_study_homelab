@@ -251,14 +251,9 @@ Lecture Recording
 
 ```
 .
-├── argocd/
-├── deployments/
-├── ingress/
-├── nextcloud/
-├── ollama/
-├── puller/
-├── services/
-├── whisper/
+├── apps/
+├── infrastructure/
+├── go-puller/
 └── README.md
 ```
 
@@ -287,7 +282,9 @@ Lecture Recording
 
 # Learning Goals
 
-This laboratory was created to gain practical experience with:
+This laboratory was created to gain practical, hands-on experience with cloud-native technologies while building a real-world AI automation platform.
+
+The main areas of focus include:
 
 - Kubernetes Administration
 - GitOps Workflows
@@ -304,7 +301,9 @@ This laboratory was created to gain practical experience with:
 - Local AI Models
 - Workflow Automation
 
-Rather than building isolated examples, the objective is to create a complete system that solves a real problem while learning modern cloud-native technologies.
+One of the primary motivations behind this project is to prepare for the **Certified Kubernetes Administrator (CKA)** certification through extensive real-world practice rather than isolated exercises. After achieving the CKA, the next objective is to continue expanding the platform while preparing for the **Certified Kubernetes Security Specialist (CKS)** certification, with a stronger focus on Kubernetes security, hardening, and production best practices.
+
+Rather than building isolated examples, the goal is to design, deploy, and operate a complete self-hosted platform that solves a real problem while continuously improving Kubernetes, DevOps, and cloud-native engineering skills.
 
 ---
 
@@ -325,26 +324,6 @@ Every stage of the pipeline runs inside the Kubernetes cluster.
 
 ---
 
-# Future Improvements
-
-Planned enhancements include:
-
-- Concurrent audio processing
-- Job queues (RabbitMQ or NATS)
-- Incremental Nextcloud synchronization
-- Metadata database
-- Automatic flashcard generation
-- Obsidian integration
-- Mind map generation
-- RAG support
-- Vector database integration
-- Prometheus monitoring
-- Grafana dashboards
-- Helm Charts
-- CI/CD pipelines
-- GPU acceleration
-
----
 
 # Project Status
 
