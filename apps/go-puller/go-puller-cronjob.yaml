@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: go-puller-cronjob
+  namespace: ai
 spec:
   schedule: "*/5 * * * *"
   jobTemplate:
