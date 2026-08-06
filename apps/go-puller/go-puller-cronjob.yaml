@@ -12,7 +12,7 @@ spec:
           restartPolicy: Never
           containers:
             - name: go-puller-cronjob
-              image: hhector16/go-puller:1.7
+              image: hhector16/go-puller:1.8
               env:
                 - name: OLLAMA_AI_ENDPOINT
                   valueFrom:
