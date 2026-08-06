@@ -9,4 +9,4 @@ data:
   WHISPER_AI_ENDPOINT: "10.98.139.210/transcribe"
   OLLAMA_AI_ENDPOINT: "10.110.194.71/api/generate"
   OLLAMA_AGENT_MODEL: "qwen2.5:3b"
-  OLLAMA_PROMT_FILE: "ollama_prompt.txt"
+  OLLAMA_PROMPT_FILE: "ollama_prompt.txt"
