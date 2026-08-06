@@ -6,7 +6,7 @@ metadata:
 data:
   NEXT_CLOUD_DOMAIN: "https://nextcloud-nextcloud-ingress-1.tailaaace6.ts.net"
   SCOPED_FOLDER_PATH: "https://nextcloud-nextcloud-ingress-1.tailaaace6.ts.net/remote.php/dav/files/hhector16/Documents/UC3M-2026-2027"
-  WHISPER_AI_ENDPOINT: "10.98.139.210/transcribe"
-  OLLAMA_AI_ENDPOINT: "10.110.194.71/api/generate"
+  WHISPER_AI_ENDPOINT: "http://whisper:8000/transcribe"
+  OLLAMA_AI_ENDPOINT: "http://ollama:11434/api/generate"
   OLLAMA_AGENT_MODEL: "qwen2.5:3b"
   OLLAMA_PROMPT_FILE: "ollama_prompt.txt"
