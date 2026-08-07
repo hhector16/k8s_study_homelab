@@ -4,8 +4,8 @@ metadata:
   name: go-puller-configmap
   namespace: ai
 data:
-  NEXT_CLOUD_DOMAIN: "https://nextcloud-nextcloud-ingress-1.tailaaace6.ts.net"
-  SCOPED_FOLDER_PATH: "https://nextcloud-nextcloud-ingress-1.tailaaace6.ts.net/remote.php/dav/files/hhector16/Documents/UC3M-2026-2027"
+  NEXT_CLOUD_DOMAIN: "http://nextcloud.nextcloud"
+  SCOPED_FOLDER_PATH: "http://nextcloud.nextcloud/remote.php/dav/files/hhector16/Documents/UC3M-2026-2027"
   WHISPER_AI_ENDPOINT: "http://whisper:8000/transcribe"
   OLLAMA_AI_ENDPOINT: "http://ollama:11434/api/generate"
   OLLAMA_AGENT_MODEL: "qwen2.5:3b"

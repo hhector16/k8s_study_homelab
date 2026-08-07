@@ -4,10 +4,13 @@ metadata:
   name: go-puller-cronjob
   namespace: ai
 spec:
-  schedule: "*/5 * * * *"
+  schedule: "*/10 * * * *"
   jobTemplate:
     spec:
       template:
+        metadata:
+          labels:
+            app: go-puller
         spec:
           restartPolicy: Never
           containers:
