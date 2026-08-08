@@ -82,3 +82,28 @@ spec:
           port: 53
         - protocol: TCP
           port: 53
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ingress-tailscale-nextcloud-policy
+  namespace: nextcloud
+spec:
+  podSelector:
+    matchLabels:
+      app: nextcloud
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: tailscale
+          podSelector:
+            matchLabels:
+              tailscale.com/managed: "true"
+      ports:
+        - protocol: TCP
+          port: 80
